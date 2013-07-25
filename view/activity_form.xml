@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--The COPYRIGHT file at the top level of this repository             
+contains the full copyright notices and license terms. -->
+<data>
+    <xpath
+        expr="/form/field[@name='dtend']"
+        position="after">
+        <group id="calendar_event" col="5" colspan="4">
+        <label name="calendar"/>
+        <field name="calendar"/>
+        <button string="Create Event" name="create_calendar_event" 
+            confirm="Create event for this activity?"/>
+        <label name="calendar_event"/> 
+        <field name="calendar_event"/>
+        </group>
+    </xpath>
+
+</data>
