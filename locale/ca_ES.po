@@ -1,0 +1,31 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:activity.activity:"
+msgid "Activity %s already has an event."
+msgstr "L'activitat %s ja té un esdeveniment."
+
+msgctxt "error:activity.activity:"
+msgid "Activity %s has already and Event"
+msgstr ""
+
+msgctxt "error:activity.activity:"
+msgid "Please select calendar for Activity  %s before create an event"
+msgstr ""
+
+msgctxt "error:activity.activity:"
+msgid "Please select calendar for activity %s before creating an event."
+msgstr ""
+"Si us plau, seleccioneu un calendari per l'activitat %s abans de crear un "
+"esdeveniment."
+
+#, fuzzy
+msgctxt "field:activity.activity,calendar:"
+msgid "Calendar"
+msgstr "Calendari"
+
+#, fuzzy
+msgctxt "field:activity.activity,calendar_event:"
+msgid "Event"
+msgstr "Esdeveniment"
