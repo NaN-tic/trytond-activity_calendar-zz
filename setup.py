@@ -4,7 +4,7 @@ import re
 import os
 import ConfigParser
 
-MODULE = activity_calendar
+MODULE = 'activity_calendar'
 PREFIX = 'nantic'
 MODULE2PREFIX = {}
 

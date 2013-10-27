@@ -2,15 +2,11 @@
 #the top level of this repository contains the full copyright notices and
 #license terms.
 
-from trytond.model import ModelSQL, ModelView, fields
+from trytond.model import ModelView, fields
 from trytond.pool import Pool, PoolMeta
-from trytond.transaction import Transaction
-
 
 __metaclass__ = PoolMeta
-
 __all__ = ['Activity']
-
 
 
 class Activity:
@@ -24,11 +20,10 @@ class Activity:
     def __setup__(cls):
         super(Activity, cls).__setup__()
         cls._error_messages.update({
-                'no_calendar_selected': ('Please select calendar for Activity '
-                    ' %s before create an event'),
-                'already_event': ('Activity %s has already and Event'),
+                'no_calendar_selected': ('Please select calendar for activity '
+                    '%s before creating an event.'),
+                'already_event': 'Activity %s already has an event.',
                 })
-
         cls._buttons.update({
                 'create_calendar_event': {},
                 })
@@ -37,14 +32,11 @@ class Activity:
     @ModelView.button
     def create_calendar_event(cls, activities):
         Event = Pool().get('calendar.event')
-        events = []
         for activity in activities:
             if activity.calendar_event:
-                cls.raise_user_error('already_event',
-                    (activity.rec_name,))
+                cls.raise_user_error('already_event', activity.rec_name)
             if not activity.calendar:
-                cls.raise_user_error('no_calendar_selected',
-                    (activity.rec_name,))
+                cls.raise_user_error('no_calendar_selected', activity.rec_name)
 
             event = Event()
             event.dtstart = activity.dtstart
@@ -56,4 +48,3 @@ class Activity:
 
             activity.calendar_event=event
             activity.save()
-
