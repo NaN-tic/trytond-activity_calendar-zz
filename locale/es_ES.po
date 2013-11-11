@@ -7,25 +7,23 @@ msgid "Activity %s already has an event."
 msgstr "La actividad %s ya tiene un evento."
 
 msgctxt "error:activity.activity:"
-msgid "Activity %s has already and Event"
-msgstr ""
-
-msgctxt "error:activity.activity:"
-msgid "Please select calendar for Activity  %s before create an event"
-msgstr ""
-
-msgctxt "error:activity.activity:"
 msgid "Please select calendar for activity %s before creating an event."
 msgstr ""
 "Por favor, seleccione un calendario para la actividad %s antes de crear un "
 "evento."
 
-#, fuzzy
 msgctxt "field:activity.activity,calendar:"
 msgid "Calendar"
-msgstr "Calendarios"
+msgstr "Calendario"
 
-#, fuzzy
 msgctxt "field:activity.activity,calendar_event:"
 msgid "Event"
 msgstr "Evento"
+
+msgctxt "view:activity.activity:"
+msgid "Create Event"
+msgstr "Crear evento"
+
+msgctxt "view:activity.activity:"
+msgid "Create event for this activity?"
+msgstr "Desea crear un evento para esta actividad?"
