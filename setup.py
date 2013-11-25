@@ -38,7 +38,7 @@ tests_require = ['proteus >= %s.%s, < %s.%s' %
 
 setup(name='%s_%s' % (PREFIX, MODULE),
     version=info.get('version', '0.0.1'),
-    description='',
+    description='Tryton module to manage Activities in calendars',
     long_description=read('README'),
     author='NaN·tic',
     url='http://www.nan-tic.com/',
@@ -50,7 +50,7 @@ setup(name='%s_%s' % (PREFIX, MODULE),
         ],
     package_data={
         'trytond.modules.%s' % MODULE: (info.get('xml', [])
-            + ['tryton.cfg', 'locale/*.po', 'tests/*.rst']),
+            + ['tryton.cfg', 'locale/*.po', 'view/*.xml', 'tests/*.rst']),
         },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
