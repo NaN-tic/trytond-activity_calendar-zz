@@ -5,12 +5,12 @@
 from trytond.model import ModelView, fields
 from trytond.pool import Pool, PoolMeta
 
-__metaclass__ = PoolMeta
+
 __all__ = ['Activity']
 
 
 class Activity:
-    'Activity'
+    __metaclass__ = PoolMeta
     __name__ = "activity.activity"
 
     calendar_event = fields.Many2One('calendar.event', 'Event')
